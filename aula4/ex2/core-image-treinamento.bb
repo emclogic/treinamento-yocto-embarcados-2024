@@ -14,7 +14,7 @@ IMAGE_INIT_MANAGER = "systemd"
 
 IMAGE_LINGUAS = "pt-br"
 
-IMAGE_FEATURES:append = " splash ssh-server-openssh package-management"
+IMAGE_FEATURES:append = " splash ssh-server-dropbear package-management "
 
 IMAGE_INSTALL:append = "\
     packagegroup-core-boot \
