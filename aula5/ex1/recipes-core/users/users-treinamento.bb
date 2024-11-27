@@ -5,13 +5,9 @@ LICENSE = "CLOSED"
 
 inherit useradd
 
-
 USERADD_PACKAGES = "${PN}"
 
-#Maneira nao segura de gerar o hash, somente para testes. Melhor gerar o hash em sua maquina usando: openssl passwd
-#posteriormente colocar o hash na variavel escapando o $ com \$
 PASSWORD_HASH = "$(openssl passwd teste)"
-
 USERADD_PARAM:${PN} = "-d /home/user1 -p '${PASSWORD_HASH}' user1"
 
 GROUPADD_PARAM:${PN} = "-g 880 group1"
